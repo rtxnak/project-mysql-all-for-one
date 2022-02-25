@@ -1,3 +1,3 @@
-SELECT *
+SELECT notes
 FROM northwind.purchase_orders
-WHERE notes IS NOT NULL AND (RIGHT(notes, 2) BETWEEN 30 AND 39);
+WHERE notes LIKE '%#__' AND (RIGHT(notes, 2) BETWEEN 30 AND 39);
